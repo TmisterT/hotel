@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use DB;
+use Illuminate\Support\Facades\Hash; // Import Hash facade for password hashing
+
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,6 +15,26 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('users')->insert([
+            // Admin
+            [
+                'name' => 'Admin',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make('111'),  // Assuming you want to hash the password
+                'role' => 'admin',
+                'status' => 'active',          
+            ],
+
+            // User   
+             [
+                'name' => 'User',
+                'email' => 'user@gmail.com',
+                'password' => Hash::make('111'),  // Assuming you want to hash the password
+                'role' => 'user',
+                'status' => 'active',          
+            ],
+
+
+        ]);
     }
 }

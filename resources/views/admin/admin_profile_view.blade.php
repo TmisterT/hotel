@@ -112,7 +112,8 @@
 										<div class="row">
 											<div class="col-sm-3"></div>
 											<div class="col-sm-9 text-secondary">
-												<img id="showImage" src="{{(!empty($profileData->photo)) ? url('upload/admin_images/' .$profileData->photo) : url('upload/no_image.jpg')}}" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+												<img id="showImage" src="{{(!empty($profileData->photo)) ? url('upload/admin_images/' .$profileData->photo) : url('upload/no_image.jpg')}}"
+												 alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
 												
 												<input type="submit" class="btn btn-primary px-4" value="Save Changes" />
 											</div>
